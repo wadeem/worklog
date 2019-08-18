@@ -1,8 +1,12 @@
 import React from 'react';
-import {Text,View} from 'react-native';
+import {View, Text} from 'react-native';
+import Button from './main/button.js';
 
 const Main = ({style}) => {
-    return <View style={style}><Text>This is main area</Text></View>
+    return <View style={style}>
+        <Text>This is main area</Text>
+        <Button/>
+    </View>;
 };
 
 export default Main;
