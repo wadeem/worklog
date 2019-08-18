@@ -1,14 +1,19 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
+let interval;
+let currentInterval = 0;
 
 const startTimer = (toggle) => {
     if (!toggle) {
         console.log('start timer');
+        interval = setInterval(() => {
+            console.log(currentInterval++);
+        }, 1000);
     } else {
         console.log('stop timer');
+        clearInterval(interval);
     }
-
 };
 
 const Button = () => {
